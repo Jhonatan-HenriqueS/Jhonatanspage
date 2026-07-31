@@ -142,10 +142,10 @@ summary {
   min-height: 3rem;
   align-items: center;
   justify-content: center;
-  gap: 1.1rem;
+  gap: 0.5rem;
   border: 1px solid transparent;
   border-radius: 999px;
-  padding: 0.8rem 1.35rem;
+  padding: 0.8rem 1.2rem;
   font-size: 0.84rem;
   font-weight: 650;
   letter-spacing: -0.01em;
@@ -371,11 +371,35 @@ summary {
   overflow: hidden;
   translate: -50% 0;
   -webkit-mask-image:
-    linear-gradient(to bottom, transparent 0%, #000 8%, #000 91%, transparent 100%),
-    linear-gradient(to right, transparent 0%, #000 16%, #000 84%, transparent 100%);
+    linear-gradient(
+      to bottom,
+      transparent 0%,
+      #000 8%,
+      #000 91%,
+      transparent 100%
+    ),
+    linear-gradient(
+      to right,
+      transparent 0%,
+      #000 16%,
+      #000 84%,
+      transparent 100%
+    );
   mask-image:
-    linear-gradient(to bottom, transparent 0%, #000 8%, #000 91%, transparent 100%),
-    linear-gradient(to right, transparent 0%, #000 16%, #000 84%, transparent 100%);
+    linear-gradient(
+      to bottom,
+      transparent 0%,
+      #000 8%,
+      #000 91%,
+      transparent 100%
+    ),
+    linear-gradient(
+      to right,
+      transparent 0%,
+      #000 16%,
+      #000 84%,
+      transparent 100%
+    );
   -webkit-mask-composite: source-in;
   mask-composite: intersect;
 }
@@ -636,7 +660,14 @@ summary {
   margin-top: clamp(8rem, 14vw, 13rem);
 }
 
-.sales-copy h2,
+.sales-copy h2 {
+  margin: 0;
+  font-size: clamp(2.4rem, 4.6vw, 5.4rem);
+  font-weight: 650;
+  letter-spacing: -0.065em;
+  line-height: 0.92;
+}
+
 .capabilities-copy h2 {
   margin: 0;
   font-size: clamp(2.7rem, 5.2vw, 5.8rem);
@@ -703,7 +734,9 @@ summary {
   margin-right: 0.55rem;
   border-radius: 50%;
   background: var(--accent);
-  box-shadow: 0.75rem 0 #d8d8dd, 1.5rem 0 #e5e5e8;
+  box-shadow:
+    0.75rem 0 #d8d8dd,
+    1.5rem 0 #e5e5e8;
   content: "";
 }
 
@@ -1452,26 +1485,30 @@ summary {
 
   .site-header {
     min-height: auto;
-    flex-direction: column;
-    gap: 0.45rem;
-    align-items: stretch;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
     padding: 1.1rem 0 0;
   }
 
   .brand-mark {
+    flex: 0 0 auto;
     font-size: 0.82rem;
   }
 
   .site-nav {
-    display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 0;
+    display: flex;
+    min-width: 0;
+    flex: 1;
+    justify-content: space-between;
+    gap: clamp(0.25rem, 1.5vw, 0.75rem);
   }
 
   .site-nav a {
     min-height: 2.25rem;
     justify-content: center;
-    font-size: clamp(0.59rem, 2.6vw, 0.69rem);
+    font-size: clamp(0.48rem, 2vw, 0.66rem);
   }
 
   .hero-ruler {
@@ -1502,14 +1539,32 @@ summary {
   }
 
   .hero-portrait {
-    top: 7.7rem;
+    top: 6.7rem;
     bottom: auto;
     width: min(94vw, 27rem);
-    height: 33rem;
+    height: 34rem;
+    -webkit-mask-image:
+      linear-gradient(to bottom, #000 0%, #000 91%, transparent 100%),
+      linear-gradient(
+        to right,
+        transparent 0%,
+        #000 16%,
+        #000 84%,
+        transparent 100%
+      );
+    mask-image:
+      linear-gradient(to bottom, #000 0%, #000 91%, transparent 100%),
+      linear-gradient(
+        to right,
+        transparent 0%,
+        #000 16%,
+        #000 84%,
+        transparent 100%
+      );
   }
 
   .hero-portrait__image {
-    scale: 1.05;
+    scale: 1.22;
   }
 
   .hero-intro {

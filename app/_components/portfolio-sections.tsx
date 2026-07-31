@@ -67,7 +67,9 @@ export function HeroSection() {
         </div>
 
         <div className="hero-intro">
-          <p className="hero-eyebrow">Jhonatan Henrique — Desenvolvedor full-stack</p>
+          <p className="hero-eyebrow">
+            Jhonatan Henrique — Desenvolvedor full-stack
+          </p>
           <h1 id="hero-title">Sistemas que resolvem. Páginas que vendem.</h1>
           <p className="hero-copy">
             Crio páginas de vendas e sistemas sob medida para transformar
@@ -78,13 +80,13 @@ export function HeroSection() {
 
         <ul className="hero-specialties" aria-label="Especialidades">
           <li>
-            <ArrowRight /> IA
+            <ArrowRight /> Criação de páginas e sistemas profissionais
           </li>
           <li>
-            <ArrowRight /> Criação de sistemas profissionais
+            <ArrowRight /> Foco em trafego orgânico e conversão
           </li>
           <li>
-            <ArrowRight /> Criação de páginas de vendas
+            <ArrowRight /> Foco em vender, agilizar e economizar
           </li>
         </ul>
 
@@ -108,7 +110,11 @@ export function HeroSection() {
 
 export function SystemsSection() {
   return (
-    <section className="systems-section" id="projetos" aria-labelledby="systems-title">
+    <section
+      className="systems-section"
+      id="projetos"
+      aria-labelledby="systems-title"
+    >
       <div className="page-shell">
         <SectionEyebrow index="01">Sistemas web</SectionEyebrow>
 
@@ -160,21 +166,22 @@ export function SalesPagesSection() {
             Design chama atenção. <span>Estratégia conduz à ação.</span>
           </h2>
           <p>
-            Cada página combina hierarquia visual, copy direta, performance e
-            SEO para transformar interesse em uma próxima ação clara.
+            Cada página combina disign estratégico, SEO, performance e textos
+            focados para prender seus clientes, visando transformar interesse em
+            uma próxima ação clara.
           </p>
           <div className="section-actions">
             <PillLink href={WHATSAPP_URL}>Contratar</PillLink>
-            <PillLink
-              href="https://jhhportifollio.vercel.app/"
-              variant="ghost"
-            >
+            <PillLink href="https://jhhportifollio.vercel.app/" variant="ghost">
               Saber mais
             </PillLink>
           </div>
         </div>
 
-        <div className="sales-media reveal" aria-label="Projetos de landing pages">
+        <div
+          className="sales-media reveal"
+          aria-label="Projetos de landing pages"
+        >
           <figure className="browser-frame browser-frame--ese">
             <figcaption>{landingPages[0].name}</figcaption>
             <div className="browser-frame__image">
@@ -203,12 +210,18 @@ export function SalesPagesSection() {
 
 export function CapabilitiesSection() {
   return (
-    <section className="capabilities-section" aria-labelledby="capabilities-title">
+    <section
+      className="capabilities-section"
+      aria-labelledby="capabilities-title"
+    >
       <div className="page-shell">
         <SectionEyebrow index="03">Do objetivo à entrega</SectionEyebrow>
 
         <div className="capabilities-grid">
-          <div className="capabilities-media reveal" aria-label="Amostra de projetos">
+          <div
+            className="capabilities-media reveal"
+            aria-label="Amostra de projetos"
+          >
             <figure className="capability-media capability-media--primary">
               <ProjectMedia
                 alt="Detalhe da landing page da ESE Tecnologia"
@@ -241,20 +254,21 @@ export function CapabilitiesSection() {
               e evoluem com o negócio — de páginas focadas em conversão a
               sistemas preparados para rotinas mais complexas.
             </p>
-            <ul className="benefit-list">
-              <li>Clareza antes da complexidade</li>
-              <li>Experiência responsiva</li>
-              <li>Código preparado para evoluir</li>
-              <li>SEO e performance desde a base</li>
-            </ul>
           </div>
         </div>
 
         <div className="problem-solution">
           <div className="problem-list">
-            <p>Uma boa ideia sem uma experiência digital à altura perde força.</p>
-            <p>Uma página confusa faz o visitante sair antes de entender a oferta.</p>
-            <p>Processos manuais consomem tempo que deveria estar no crescimento.</p>
+            <p>
+              Uma boa ideia sem uma experiência digital à altura perde força.
+            </p>
+            <p>
+              Uma página confusa faz o visitante sair antes de entender a
+              oferta.
+            </p>
+            <p>
+              Processos manuais consomem tempo que deveria estar no crescimento.
+            </p>
             <p>Tecnologia sem objetivo vira custo, não solução.</p>
           </div>
           <div className="solution-copy">
@@ -317,7 +331,10 @@ function SystemsComposition() {
   return (
     <div className="proof-composition proof-composition--systems">
       {systems.map((project, index) => (
-        <figure className={`proof-shot proof-shot--system-${index + 1}`} key={project.name}>
+        <figure
+          className={`proof-shot proof-shot--system-${index + 1}`}
+          key={project.name}
+        >
           <ProjectMedia
             alt={project.alt}
             sizes="(max-width: 767px) 75vw, 31vw"
@@ -333,7 +350,10 @@ function LandingPagesComposition() {
   return (
     <div className="proof-composition proof-composition--pages">
       {landingPages.map((project, index) => (
-        <figure className={`proof-shot proof-shot--page-${index + 1}`} key={project.name}>
+        <figure
+          className={`proof-shot proof-shot--page-${index + 1}`}
+          key={project.name}
+        >
           <ProjectMedia
             alt={project.alt}
             sizes="(max-width: 767px) 78vw, 38vw"
@@ -427,8 +447,8 @@ export function ProofSection() {
             Explicar meu projeto
           </PillLink>
           <p className="final-cta__ps">
-            P.S.: Você não precisa chegar com a solução pronta. Comece contando o
-            problema que sua empresa precisa resolver.
+            P.S.: Você não precisa chegar com a solução pronta. Comece contando
+            o problema que sua empresa precisa resolver.
           </p>
         </div>
       </div>
@@ -445,11 +465,7 @@ export function SiteFooter() {
         </a>
         <div className="footer-contact">
           <p>Contato comercial</p>
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
             WhatsApp <ArrowUpRight />
           </a>
           <a href="mailto:jhonatanhrcomercial@gmail.com">
