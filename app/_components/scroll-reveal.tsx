@@ -8,16 +8,8 @@ export function ScrollReveal() {
     const elements = Array.from(
       document.querySelectorAll<HTMLElement>(".reveal"),
     );
-    const reducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    ).matches;
 
-    if (reducedMotion) {
-      elements.forEach((element) => element.classList.add("is-visible"));
-      return;
-    }
-
-    root.classList.add("scroll-reveal-ready");
+    root.classList.add("scroll-reveal-ready", "scroll-reveal-mounted");
 
     const pendingElements = new Set(elements);
     let animationFrame = 0;
@@ -33,14 +25,17 @@ export function ScrollReveal() {
     const revealElementsInViewport = () => {
       animationFrame = 0;
       const revealLine = window.innerHeight * 0.9;
+      const visibleElements: HTMLElement[] = [];
 
       pendingElements.forEach((element) => {
         const bounds = element.getBoundingClientRect();
 
         if (bounds.top <= revealLine && bounds.bottom >= 0) {
-          revealElement(element);
+          visibleElements.push(element);
         }
       });
+
+      visibleElements.forEach(revealElement);
     };
 
     const scheduleViewportCheck = () => {
@@ -75,7 +70,7 @@ export function ScrollReveal() {
       window.cancelAnimationFrame(animationFrame);
       window.removeEventListener("scroll", scheduleViewportCheck);
       window.removeEventListener("resize", scheduleViewportCheck);
-      root.classList.remove("scroll-reveal-ready");
+      root.classList.remove("scroll-reveal-ready", "scroll-reveal-mounted");
     };
   }, []);
 

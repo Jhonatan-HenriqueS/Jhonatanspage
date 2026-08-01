@@ -10,6 +10,19 @@ import {
 import { ScrollReveal } from "@/app/_components/scroll-reveal";
 import { SITE_URL } from "@/app/_data/site";
 
+const scrollRevealBootstrap = `
+  (() => {
+    const root = document.documentElement;
+    root.classList.add("scroll-reveal-ready");
+
+    window.setTimeout(() => {
+      if (!root.classList.contains("scroll-reveal-mounted")) {
+        root.classList.remove("scroll-reveal-ready");
+      }
+    }, 6000);
+  })();
+`;
+
 export default function Home() {
   const personJsonLd = {
     "@context": "https://schema.org",
@@ -42,6 +55,9 @@ export default function Home() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(personJsonLd).replace(/</g, "\\u003c"),
         }}
+      />
+      <script
+        dangerouslySetInnerHTML={{ __html: scrollRevealBootstrap }}
       />
       <ScrollReveal />
       <main id="conteudo">
