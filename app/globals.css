@@ -1231,6 +1231,7 @@ summary {
   padding: clamp(4rem, 8vw, 8rem) var(--page-gutter);
   text-align: center;
   border-radius: var(--radius-md);
+  margin: 0 -10px;
 }
 
 .final-cta::before {
@@ -1895,6 +1896,7 @@ html.scroll-reveal-ready .reveal.is-visible {
   .final-cta {
     margin-inline: -1rem;
     padding-inline: 1rem;
+    margin: 0 -10px;
   }
 
   .final-cta h3 {
