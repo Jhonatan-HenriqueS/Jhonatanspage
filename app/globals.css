@@ -417,6 +417,7 @@ summary {
   object-position: center bottom;
   scale: 1.22;
   transform-origin: center bottom;
+  margin-top: 1.3rem;
 }
 
 .hero-intro {
@@ -623,7 +624,7 @@ summary {
   right: -10%;
   bottom: -1px;
   left: 10%;
-  height: 43%;
+  height: 50%;
   overflow: hidden;
   border: 1px solid rgb(17 19 24 / 10%);
   border-radius: 0.85rem 0 0 0;
