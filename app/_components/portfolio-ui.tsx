@@ -70,7 +70,9 @@ export function SectionEyebrow({
   light?: boolean;
 }) {
   return (
-    <div className={`section-eyebrow${light ? " section-eyebrow--light" : ""}`}>
+    <div
+      className={`section-eyebrow reveal${light ? " section-eyebrow--light" : ""}`}
+    >
       <span>{index}</span>
       <p>{children}</p>
     </div>

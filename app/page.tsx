@@ -7,6 +7,7 @@ import {
   SiteFooter,
   SystemsSection,
 } from "@/app/_components/portfolio-sections";
+import { ScrollReveal } from "@/app/_components/scroll-reveal";
 import { SITE_URL } from "@/app/_data/site";
 
 export default function Home() {
@@ -42,6 +43,7 @@ export default function Home() {
           __html: JSON.stringify(personJsonLd).replace(/</g, "\\u003c"),
         }}
       />
+      <ScrollReveal />
       <main id="conteudo">
         <HeroSection />
         <SystemsSection />

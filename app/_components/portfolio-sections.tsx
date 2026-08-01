@@ -161,7 +161,7 @@ export function SalesPagesSection() {
       <div className="page-shell sales-shell">
         <SectionEyebrow index="02">Páginas de vendas</SectionEyebrow>
 
-        <div className="sales-copy reveal">
+        <div className="sales-copy reveal" data-reveal="left">
           <h2 id="sales-title">
             Design chama atenção. <span>Estratégia conduz à ação.</span>
           </h2>
@@ -180,6 +180,7 @@ export function SalesPagesSection() {
 
         <div
           className="sales-media reveal"
+          data-reveal="right"
           aria-label="Projetos de landing pages"
         >
           <figure className="browser-frame browser-frame--ese">
@@ -220,6 +221,7 @@ export function CapabilitiesSection() {
         <div className="capabilities-grid">
           <div
             className="capabilities-media reveal"
+            data-reveal="left"
             aria-label="Amostra de projetos"
           >
             <figure className="capability-media capability-media--primary">
@@ -245,7 +247,7 @@ export function CapabilitiesSection() {
             </figure>
           </div>
 
-          <div className="capabilities-copy reveal">
+          <div className="capabilities-copy reveal" data-reveal="right">
             <h2 id="capabilities-title">
               Da página de vendas ao <span>sistema completo.</span>
             </h2>
@@ -258,7 +260,7 @@ export function CapabilitiesSection() {
         </div>
 
         <div className="problem-solution">
-          <div className="problem-list">
+          <div className="problem-list reveal" data-reveal="left">
             <p>
               Uma boa ideia sem uma experiência digital à altura perde força.
             </p>
@@ -271,7 +273,7 @@ export function CapabilitiesSection() {
             </p>
             <p>Tecnologia sem objetivo vira custo, não solução.</p>
           </div>
-          <div className="solution-copy">
+          <div className="solution-copy reveal" data-reveal="right">
             <p className="solution-label">A abordagem</p>
             <p>
               O trabalho começa pelo objetivo do negócio. A partir dele, cada
@@ -292,7 +294,7 @@ export function AboutSection() {
         <SectionEyebrow index="04">Sobre</SectionEyebrow>
 
         <div className="about-grid">
-          <div className="about-signature reveal">
+          <div className="about-signature reveal" data-reveal="left">
             <p>Desenvolvedor full-stack</p>
             <h2 id="about-title">JHONATAN</h2>
             <span>Ji-Paraná · RO</span>
@@ -308,7 +310,7 @@ export function AboutSection() {
             />
           </figure>
 
-          <div className="about-copy reveal">
+          <div className="about-copy reveal" data-reveal="right">
             <p>
               Sou Jhonatan Henrique, desenvolvedor full-stack e estudante do
               IFRO em Ji-Paraná, Rondônia. Transformo problemas de empresas em
@@ -329,7 +331,10 @@ export function AboutSection() {
 
 function SystemsComposition() {
   return (
-    <div className="proof-composition proof-composition--systems">
+    <div
+      className="proof-composition proof-composition--systems reveal"
+      data-reveal="right"
+    >
       {systems.map((project, index) => (
         <figure
           className={`proof-shot proof-shot--system-${index + 1}`}
@@ -348,7 +353,10 @@ function SystemsComposition() {
 
 function LandingPagesComposition() {
   return (
-    <div className="proof-composition proof-composition--pages">
+    <div
+      className="proof-composition proof-composition--pages reveal"
+      data-reveal="left"
+    >
       {landingPages.map((project, index) => (
         <figure
           className={`proof-shot proof-shot--page-${index + 1}`}
@@ -375,7 +383,7 @@ export function ProofSection() {
         </h2>
 
         <div className="proof-row proof-row--systems">
-          <div className="proof-copy reveal">
+          <div className="proof-copy reveal" data-reveal="left">
             <p className="proof-count">03</p>
             <h3>3 sistemas criados para dores reais.</h3>
             <p>
@@ -389,7 +397,7 @@ export function ProofSection() {
 
         <div className="proof-row proof-row--pages">
           <LandingPagesComposition />
-          <div className="proof-copy reveal">
+          <div className="proof-copy reveal" data-reveal="right">
             <p className="proof-count">02</p>
             <h3>2 páginas construídas para conduzir à ação.</h3>
             <p>
@@ -399,7 +407,7 @@ export function ProofSection() {
           </div>
         </div>
 
-        <div className="offer-band">
+        <div className="offer-band reveal">
           <p className="offer-band__label">O que posso criar</p>
           <p>
             Landing pages, sistemas web e soluções digitais desenvolvidas de
@@ -411,7 +419,7 @@ export function ProofSection() {
         </div>
 
         <div className="faq-grid">
-          <div>
+          <div className="faq-intro reveal" data-reveal="left">
             <p className="faq-kicker">Antes de começar</p>
             <h3>Respostas diretas para decisões melhores.</h3>
             <p className="faq-reassurance">
@@ -421,7 +429,7 @@ export function ProofSection() {
           </div>
           <div className="faq-list">
             {faqs.map((item, index) => (
-              <details key={item.question}>
+              <details className="reveal" key={item.question}>
                 <summary>
                   <span>0{index + 1}</span>
                   {item.question}
@@ -435,7 +443,7 @@ export function ProofSection() {
           </div>
         </div>
 
-        <div className="final-cta">
+        <div className="final-cta reveal">
           <div className="final-cta__line" aria-hidden="true" />
           <p className="final-cta__index">06 / CONTATO</p>
           <h3>Seu próximo projeto pode estar aqui.</h3>
@@ -460,10 +468,10 @@ export function SiteFooter() {
   return (
     <footer className="site-footer" id="contato">
       <div className="page-shell footer-grid">
-        <a className="footer-brand" href="#inicio">
+        <a className="footer-brand reveal" href="#inicio">
           JHONATAN
         </a>
-        <div className="footer-contact">
+        <div className="footer-contact reveal">
           <p>Contato comercial</p>
           <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
             WhatsApp <ArrowUpRight />
@@ -472,7 +480,7 @@ export function SiteFooter() {
             jhonatanhrcomercial@gmail.com <ArrowUpRight />
           </a>
         </div>
-        <div className="footer-social">
+        <div className="footer-social reveal">
           <p>Social</p>
           <a
             href="https://www.instagram.com/jh.rique/"
@@ -482,10 +490,10 @@ export function SiteFooter() {
             Instagram <ArrowUpRight />
           </a>
         </div>
-        <p className="footer-copyright">
+        <p className="footer-copyright reveal">
           © 2026 Jhonatan Henrique. Todos os direitos reservados.
         </p>
-        <a className="back-to-top" href="#inicio">
+        <a className="back-to-top reveal" href="#inicio">
           Voltar ao topo <span aria-hidden="true">↑</span>
         </a>
       </div>

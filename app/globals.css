@@ -732,7 +732,7 @@ summary {
 .browser-frame figcaption::before {
   width: 0.42rem;
   height: 0.42rem;
-  margin-right: 0.55rem;
+  margin-right: 2.4rem;
   border-radius: 50%;
   background: var(--accent);
   box-shadow:
@@ -1365,25 +1365,57 @@ summary {
   margin-left: 0.45rem;
 }
 
-/* Progressive motion without client-side JavaScript */
+/* Scroll reveal: enabled only after the client observer is ready. */
 
-@supports (animation-timeline: view()) {
-  .reveal {
-    animation: reveal linear both;
-    animation-range: entry 8% cover 30%;
-    animation-timeline: view();
-  }
+.reveal {
+  --reveal-delay: 0ms;
+}
 
-  @keyframes reveal {
-    from {
-      opacity: 0;
-      translate: 0 1.4rem;
-    }
-    to {
-      opacity: 1;
-      translate: 0;
-    }
-  }
+html.scroll-reveal-ready .reveal {
+  opacity: 0;
+  translate: 0 1.65rem;
+  scale: 0.992;
+  transition:
+    opacity 720ms cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay),
+    translate 860ms cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay),
+    scale 860ms cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay);
+  will-change: opacity, translate, scale;
+}
+
+html.scroll-reveal-ready .reveal[data-reveal="left"] {
+  translate: -1.65rem 0;
+}
+
+html.scroll-reveal-ready .reveal[data-reveal="right"] {
+  translate: 1.65rem 0;
+}
+
+html.scroll-reveal-ready .reveal.is-visible {
+  opacity: 1;
+  translate: 0;
+  scale: 1;
+  will-change: auto;
+}
+
+.systems-grid .system-card:nth-child(2),
+.faq-list details:nth-child(2),
+.footer-contact {
+  --reveal-delay: 90ms;
+}
+
+.systems-grid .system-card:nth-child(3),
+.faq-list details:nth-child(3),
+.footer-social {
+  --reveal-delay: 180ms;
+}
+
+.faq-list details:nth-child(4),
+.footer-copyright {
+  --reveal-delay: 270ms;
+}
+
+.back-to-top {
+  --reveal-delay: 360ms;
 }
 
 /* Large screens */
@@ -1967,5 +1999,6 @@ summary {
     animation: none !important;
     opacity: 1 !important;
     translate: 0 !important;
+    scale: 1 !important;
   }
 }
