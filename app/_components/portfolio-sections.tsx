@@ -70,12 +70,12 @@ export function HeroSection() {
           <p className="hero-eyebrow">
             Jhonatan Henrique — Desenvolvedor full-stack
           </p>
-          <h1 id="hero-title">Sistemas que resolvem. Páginas que vendem.</h1>
-          <p className="hero-copy">
+          <h1 id="hero-title">Tecnologia que resolve, estratégia que vende.</h1>
+          {/* <p className="hero-copy">
             Crio páginas de vendas e sistemas sob medida para transformar
             problemas reais em experiências digitais claras, rápidas e prontas
             para gerar oportunidades.
-          </p>
+          </p> */}
         </div>
 
         <ul className="hero-specialties" aria-label="Especialidades">
@@ -93,7 +93,7 @@ export function HeroSection() {
         <div className="hero-actions">
           <div>
             <PillLink href={WHATSAPP_URL} variant="light">
-              Falar sobre meu projeto
+              Iniciar projeto
             </PillLink>
             <p className="hero-microcopy">Conte o que sua empresa precisa.</p>
           </div>
