@@ -13,6 +13,7 @@ import {
   ProjectMedia,
   SectionEyebrow,
 } from "./portfolio-ui";
+import { Tilt3D } from "./tilt-3d";
 
 export function SiteHeader() {
   return (
@@ -126,24 +127,29 @@ export function SystemsSection() {
 
         <div className="systems-grid">
           {systems.map((project, index) => (
-            <article
-              className={`system-card system-card--${project.tone} reveal`}
-              key={project.name}
+            <Tilt3D
+              className={`system-card-tilt system-card-tilt--${project.tone}`}
+              key={project.id}
+              projectId={project.id}
             >
-              <p className="card-index">0{index + 1}</p>
-              <div className="system-card__copy">
-                <h3>{project.name}</h3>
-                <p className="system-card__tagline">{project.tagline}</p>
-                <p>{project.description}</p>
-              </div>
-              <div className="system-card__media">
-                <ProjectMedia
-                  alt={project.alt}
-                  sizes="(max-width: 767px) 86vw, (max-width: 1100px) 45vw, 31vw"
-                  src={project.image}
-                />
-              </div>
-            </article>
+              <article
+                className={`system-card system-card--${project.tone} reveal`}
+              >
+                <p className="card-index">0{index + 1}</p>
+                <div className="system-card__copy">
+                  <h3>{project.name}</h3>
+                  <p className="system-card__tagline">{project.tagline}</p>
+                  <p>{project.description}</p>
+                </div>
+                <div className="system-card__media">
+                  <ProjectMedia
+                    alt={project.alt}
+                    sizes="(max-width: 767px) 86vw, (max-width: 1100px) 45vw, 31vw"
+                    src={project.image}
+                  />
+                </div>
+              </article>
+            </Tilt3D>
           ))}
         </div>
       </div>

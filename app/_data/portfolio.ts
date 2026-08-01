@@ -10,6 +10,7 @@ export const navItems = [
 ] as const;
 
 export type Project = {
+  id: string;
   name: string;
   tagline: string;
   description: string;
@@ -20,6 +21,7 @@ export type Project = {
 
 export const systems: Project[] = [
   {
+    id: "lumen-tasks",
     name: "Lumen Tasks",
     tagline: "Rotinas claras, tarefas em dia.",
     description:
@@ -29,6 +31,7 @@ export const systems: Project[] = [
     tone: "paper",
   },
   {
+    id: "jhovy",
     name: "Jhovy",
     tagline: "O cardápio online encontra uma operação mais simples.",
     description:
@@ -38,6 +41,7 @@ export const systems: Project[] = [
     tone: "lavender",
   },
   {
+    id: "financas",
     name: "Finanças",
     tagline: "Entenda para onde seu dinheiro está indo.",
     description:
