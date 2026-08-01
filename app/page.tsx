@@ -56,9 +56,7 @@ export default function Home() {
           __html: JSON.stringify(personJsonLd).replace(/</g, "\\u003c"),
         }}
       />
-      <script
-        dangerouslySetInnerHTML={{ __html: scrollRevealBootstrap }}
-      />
+      <script dangerouslySetInnerHTML={{ __html: scrollRevealBootstrap }} />
       <ScrollReveal />
       <main id="conteudo">
         <HeroSection />

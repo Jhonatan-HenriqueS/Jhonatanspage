@@ -1,3 +1,4 @@
+import { BackgroundBeamsWithCollision } from "@/app/_components/ui/background-beams-with-collision";
 import Image from "next/image";
 import {
   faqs,
@@ -36,76 +37,83 @@ export function SiteHeader() {
 
 export function HeroSection() {
   return (
-    <section className="hero-section" id="inicio" aria-labelledby="hero-title">
-      <div className="page-shell hero-shell">
-        <SiteHeader />
+    <BackgroundBeamsWithCollision className="hero-section">
+      <section id="inicio" aria-labelledby="hero-title">
+        <div className="page-shell hero-shell">
+          <SiteHeader />
 
-        <div className="hero-ruler hero-ruler--top" aria-hidden="true">
-          <span />
-        </div>
-        <div className="hero-vertical hero-vertical--left" aria-hidden="true">
-          <span>↑</span>
-          <span>↓</span>
-        </div>
-        <div className="hero-vertical hero-vertical--right" aria-hidden="true">
-          <span>↑</span>
-          <span>↓</span>
-        </div>
+          <div className="hero-ruler hero-ruler--top" aria-hidden="true">
+            <span />
+          </div>
+          <div className="hero-vertical hero-vertical--left" aria-hidden="true">
+            <span>↑</span>
+            <span>↓</span>
+          </div>
+          <div
+            className="hero-vertical hero-vertical--right"
+            aria-hidden="true"
+          >
+            <span>↑</span>
+            <span>↓</span>
+          </div>
 
-        <p className="hero-monument" aria-hidden="true">
-          JHONATAN
-        </p>
-
-        <div className="hero-portrait" aria-hidden="true">
-          <Image
-            alt=""
-            className="hero-portrait__image"
-            fill
-            priority
-            sizes="(max-width: 767px) 86vw, (max-width: 1279px) 52vw, 38vw"
-            src="/images/portfolio/jhonatan-standing.png"
-          />
-        </div>
-
-        <div className="hero-intro">
-          <p className="hero-eyebrow">
-            Jhonatan Henrique — Desenvolvedor full-stack
+          <p className="hero-monument" aria-hidden="true">
+            JHONATAN
           </p>
-          <h1 id="hero-title">Tecnologia que resolve, estratégia que vende.</h1>
-          {/* <p className="hero-copy">
+
+          <div className="hero-portrait" aria-hidden="true">
+            <Image
+              alt=""
+              className="hero-portrait__image"
+              fill
+              priority
+              sizes="(max-width: 767px) 86vw, (max-width: 1279px) 52vw, 38vw"
+              src="/images/portfolio/jhonatan-standing.png"
+            />
+          </div>
+
+          <div className="hero-intro">
+            <p className="hero-eyebrow">
+              Jhonatan Henrique — Desenvolvedor full-stack
+            </p>
+            <h1 id="hero-title">
+              Tecnologia que resolve, estratégia que vende.
+            </h1>
+            {/* <p className="hero-copy">
             Crio páginas de vendas e sistemas sob medida para transformar
             problemas reais em experiências digitais claras, rápidas e prontas
             para gerar oportunidades.
           </p> */}
-        </div>
-
-        <ul className="hero-specialties" aria-label="Especialidades">
-          <li>
-            <ArrowRight /> Criação de páginas e sistemas profissionais
-          </li>
-          <li>
-            <ArrowRight /> Foco em trafego orgânico e conversão
-          </li>
-          <li>
-            <ArrowRight /> Foco em vender, agilizar e economizar
-          </li>
-        </ul>
-
-        <div className="hero-actions">
-          <div>
-            <PillLink href={WHATSAPP_URL} variant="light">
-              Iniciar projeto
-            </PillLink>
-            <p className="hero-microcopy">Conte o que sua empresa precisa.</p>
           </div>
-          <PillLink href="#projetos" variant="outline">
-            Ver projetos
-          </PillLink>
-        </div>
 
-        <p className="hero-location">Ji-Paraná · Rondônia</p>
-      </div>
-    </section>
+          <ul className="hero-specialties" aria-label="Especialidades">
+            <li>
+              <ArrowRight /> Criação de páginas e sistemas profissionais
+            </li>
+            <li>
+              <ArrowRight /> Foco em trafego orgânico e conversão
+            </li>
+            <li>
+              <ArrowRight /> Foco em vender, agilizar e economizar
+            </li>
+          </ul>
+
+          <div className="hero-actions">
+            <div>
+              <PillLink href={WHATSAPP_URL} variant="light">
+                Iniciar projeto
+              </PillLink>
+              <p className="hero-microcopy">Conte o que sua empresa precisa.</p>
+            </div>
+            <PillLink href="#projetos" variant="outline">
+              Ver projetos
+            </PillLink>
+          </div>
+
+          <p className="hero-location">Ji-Paraná · Rondônia</p>
+        </div>
+      </section>
+    </BackgroundBeamsWithCollision>
   );
 }
 
@@ -179,7 +187,7 @@ export function SalesPagesSection() {
           <div className="section-actions">
             <PillLink href={WHATSAPP_URL}>Contratar</PillLink>
             <PillLink href="https://jhhportifollio.vercel.app/" variant="ghost">
-              Saber mais
+              Ver meus projetos
             </PillLink>
           </div>
         </div>
@@ -403,7 +411,7 @@ export function ProofSection() {
         <div className="proof-row proof-row--pages">
           <LandingPagesComposition />
           <div className="proof-copy reveal" data-reveal="right">
-            <h3>2 páginas construídas para conduzir à ação.</h3>
+            <h3>2 páginas construídas para turbinar vendas.</h3>
             <p>
               Projetos que unem mensagem, hierarquia visual e caminhos claros
               para transformar visitantes em conversas e oportunidades.
@@ -492,6 +500,13 @@ export function SiteFooter() {
             rel="noopener noreferrer"
           >
             Instagram <ArrowUpRight />
+          </a>
+          <a
+            href="https://jhhportifollio.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Conheça meus projetos <ArrowUpRight />
           </a>
         </div>
         <p className="footer-copyright reveal">

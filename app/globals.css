@@ -828,21 +828,24 @@ summary {
 .capability-media--primary {
   top: 0;
   left: 0;
-  width: 54%;
+  width: 74%;
+  height: 54%;
   aspect-ratio: 0.82;
 }
 
 .capability-media--tasks {
   top: 6rem;
   right: 0;
-  width: 48%;
+  width: 64%;
+  height: 48%;
   aspect-ratio: 0.95;
 }
 
 .capability-media--finance {
   right: 7%;
   bottom: 0;
-  width: 45%;
+  width: 65%;
+  height: 45%;
   aspect-ratio: 1.05;
 }
 
