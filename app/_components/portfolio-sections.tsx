@@ -384,7 +384,6 @@ export function ProofSection() {
 
         <div className="proof-row proof-row--systems">
           <div className="proof-copy reveal" data-reveal="left">
-            <p className="proof-count">03</p>
             <h3>3 sistemas criados para dores reais.</h3>
             <p>
               Organização de rotinas, operação de restaurantes e controle
@@ -398,7 +397,6 @@ export function ProofSection() {
         <div className="proof-row proof-row--pages">
           <LandingPagesComposition />
           <div className="proof-copy reveal" data-reveal="right">
-            <p className="proof-count">02</p>
             <h3>2 páginas construídas para conduzir à ação.</h3>
             <p>
               Projetos que unem mensagem, hierarquia visual e caminhos claros
