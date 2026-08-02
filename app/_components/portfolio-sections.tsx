@@ -197,7 +197,7 @@ export function SalesPagesSection() {
           data-reveal="right"
           aria-label="Projetos de landing pages"
         >
-          <figure className="browser-frame browser-frame--ese">
+          <figure className="browser-frame browser-frame--ese project-visual-hover">
             <figcaption>{landingPages[0].name}</figcaption>
             <div className="browser-frame__image">
               <ProjectMedia
@@ -207,7 +207,7 @@ export function SalesPagesSection() {
               />
             </div>
           </figure>
-          <figure className="browser-frame browser-frame--jhovy">
+          <figure className="browser-frame browser-frame--jhovy project-visual-hover">
             <figcaption>{landingPages[1].name}</figcaption>
             <div className="browser-frame__image">
               <ProjectMedia
@@ -238,21 +238,21 @@ export function CapabilitiesSection() {
             data-reveal="left"
             aria-label="Amostra de projetos"
           >
-            <figure className="capability-media capability-media--primary">
+            <figure className="capability-media capability-media--primary project-visual-hover">
               <ProjectMedia
                 alt="Detalhe da landing page da ESE Tecnologia"
                 sizes="(max-width: 767px) 78vw, 28vw"
                 src="/images/portfolio/ese-landing-page.png"
               />
             </figure>
-            <figure className="capability-media capability-media--tasks">
+            <figure className="capability-media capability-media--tasks project-visual-hover">
               <ProjectMedia
                 alt="Detalhe do painel de tarefas do Lumen Tasks"
                 sizes="(max-width: 767px) 62vw, 22vw"
                 src="/images/portfolio/lumen-tasks.png"
               />
             </figure>
-            <figure className="capability-media capability-media--finance">
+            <figure className="capability-media capability-media--finance project-visual-hover">
               <ProjectMedia
                 alt="Detalhe do painel de controle financeiro"
                 sizes="(max-width: 767px) 62vw, 22vw"
@@ -351,7 +351,7 @@ function SystemsComposition() {
     >
       {systems.map((project, index) => (
         <figure
-          className={`proof-shot proof-shot--system-${index + 1}`}
+          className={`proof-shot proof-shot--system-${index + 1} project-visual-hover`}
           key={project.name}
         >
           <ProjectMedia
@@ -373,7 +373,7 @@ function LandingPagesComposition() {
     >
       {landingPages.map((project, index) => (
         <figure
-          className={`proof-shot proof-shot--page-${index + 1}`}
+          className={`proof-shot proof-shot--page-${index + 1} project-visual-hover`}
           key={project.name}
         >
           <ProjectMedia
