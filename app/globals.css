@@ -1532,6 +1532,23 @@ html.scroll-reveal-ready .reveal.is-visible {
   }
 }
 
+@media (min-width: 821px) and (max-width: 1100px) {
+  .system-card-tilt--ink {
+    grid-column: 1 / -1;
+    width: calc((100% - clamp(0.8rem, 1.6vw, 1.5rem)) / 2);
+    justify-self: center;
+  }
+
+  .system-card-tilt--ink .system-card--ink {
+    width: 100%;
+  }
+
+  .sales-media {
+    right: 0;
+    width: 62%;
+  }
+}
+
 /* Mobile and portrait tablets */
 
 @media (max-width: 820px) {
@@ -1784,16 +1801,16 @@ html.scroll-reveal-ready .reveal.is-visible {
   }
 
   .capability-media--primary {
-    width: 58%;
+    width: 80%;
   }
 
   .capability-media--tasks {
     top: 4.5rem;
-    width: 52%;
+    width: 70%;
   }
 
   .capability-media--finance {
-    width: 51%;
+    width: 72%;
   }
 
   .capabilities-copy {
