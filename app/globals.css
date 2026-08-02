@@ -1477,7 +1477,6 @@ html.scroll-reveal-ready .reveal.is-visible {
     right: -2rem;
   }
 }
-
 /* Tablets and small notebooks */
 
 @media (max-width: 1100px) {
@@ -1944,14 +1943,18 @@ html.scroll-reveal-ready .reveal.is-visible {
     grid-column: 1 / -1;
     margin-top: 2rem;
   }
-
-  .back-to-top {
+  systems-grid .back-to-top {
     grid-column: 1 / -1;
     justify-self: start;
     margin-top: 0;
   }
 }
 
+@media (min-width: 391px) and (max-width: 580px) {
+  .hero-monument {
+    font-size: 4.2rem;
+  }
+}
 @media (max-width: 390px) {
   .hero-section,
   .hero-shell {
@@ -1971,11 +1974,11 @@ html.scroll-reveal-ready .reveal.is-visible {
   }
 
   .hero-specialties {
-    top: 52rem;
+    top: 45rem;
   }
 
   .hero-actions {
-    top: 48rem;
+    top: 54rem;
     right: 1.6rem;
     bottom: auto;
     left: 1.6rem;
